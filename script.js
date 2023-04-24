@@ -20,3 +20,24 @@ faqs.forEach((faq) => {
         }
     })
 })
+
+// show/hide nav menu
+const menu = querySelector('.nav__menu')
+const menuBtn = querySelector('#open-menu-btn')
+const closeBtn = querySelector('#open-menu-btn')
+
+menuBtn.addEventListener('click', ()=>{
+    menu.style.display ='flex';
+    closeBtn.style.display = 'inline-block'
+    menuBtn.style.display = 'none'
+})
+
+
+// close nav menu
+const closeNav = ()=>{
+    menu.style.display ='none';
+    closeBtn.style.display = 'none'
+    menuBtn.style.display = 'inline-block'
+}
+
+closeBtn.addEventListener('click', closeNav)
